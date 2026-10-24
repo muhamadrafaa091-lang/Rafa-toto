@@ -330,3 +330,63 @@ footer small {
     grid-template-columns: repeat(2, 1fr);
   }
   }
+/* RAFA TOTO PROVIDER */
+.provider-section {
+  padding: 25px 15px;
+  background: #101010;
+  color: #fff;
+  text-align: center;
+}
+
+.provider-section h2 {
+  color: #ffd700;
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.provider-section p {
+  color: #ccc;
+  margin-bottom: 22px;
+}
+
+.provider-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 850px;
+  margin: auto;
+}
+
+.provider-card {
+  background: linear-gradient(145deg, #292929, #111);
+  border: 1px solid #c49b32;
+  border-radius: 14px;
+  padding: 25px 10px;
+  box-shadow: 0 4px 15px #000;
+}
+
+.provider-card h3 {
+  color: #ffd700;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.provider-card button {
+  background: linear-gradient(90deg, #b8860b, #ffe082);
+  color: #111;
+  border: none;
+  padding: 10px 17px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.provider-card button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 400px) {
+  .provider-grid {
+    gap: 10px;
+  }
+}
