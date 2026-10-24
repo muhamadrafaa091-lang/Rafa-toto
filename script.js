@@ -34,7 +34,9 @@ function closeGame() {
   gameModal.style.display = "none";
 }
 
-pointsDisplay.textContent = points;
+if (pointsDisplay) {
+  pointsDisplay.textContent = points;
+  }
 // RAFA TOTO - SISTEM KATALOG DEMO
 
 const providerGames = {
