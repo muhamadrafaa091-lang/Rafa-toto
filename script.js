@@ -143,32 +143,3 @@ function showDemoInfo(name) {
   alert(name + " — Katalog hiburan demo RAFA TOTO.");
 }
 
-
-
-function openProvider(providerId) {
-  const provider = providerGames[providerId];
-
-  if (!provider) return;
-
-  const gameList = provider.games.map(game =>
-    `<div class="game-item">🎰 ${game}</div>`
-  ).join("");
-
-  document.getElementById("providerModal").innerHTML = `
-    <div class="provider-modal-content">
-      <button onclick="closeProvider()">✖</button>
-      <h2>${provider.title}</h2>
-      <p>GAME COLLECTION</p>
-      <div class="game-list">
-        ${gameList}
-      </div>
-    </div>
-  `;
-
-  document.getElementById("providerModal").style.display = "flex";
-}
-
-function closeProvider() {
-  document.getElementById("providerModal").style.display = "none";
-}
-
