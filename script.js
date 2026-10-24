@@ -149,3 +149,23 @@ function showDemoInfo(name) {
   gameModal.style.display = "flex";
 }
 
+
+function spinMahjongDemo() {
+  const board = document.getElementById("mahjongBoard");
+  const message = document.getElementById("gameMessage");
+  const pointsText = document.getElementById("gamePoints");
+
+  const tiles = ["🀄", "🀅", "🀆", "🀇", "🀈", "🀉", "🀊", "🀋", "🀌", "🀍", "🀎", "🀏"];
+
+  board.innerHTML = "";
+
+  for (let i = 0; i < 20; i++) {
+    const tile = document.createElement("div");
+    tile.textContent = tiles[Math.floor(Math.random() * tiles.length)];
+    board.appendChild(tile);
+  }
+
+  message.textContent = "✨ Putaran demo selesai!";
+
+  pointsText.textContent = "1000 POIN VIRTUAL";
+}
