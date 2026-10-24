@@ -133,7 +133,40 @@
   <p>Virtual Game Entertainment</p>
   <small>© 2026 RAFA TOTO</small>
 </footer>
+<div id="gameModal" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+">
+  <div style="
+    background:#17172b;
+    color:white;
+    padding:25px;
+    border-radius:18px;
+    width:100%;
+    max-width:400px;
+    text-align:center;
+  ">
+    <h2 id="gameTitle">RAFA TOTO</h2>
 
+    <div style="font-size:65px;margin:20px;">
+      🎰
+    </div>
+
+    <p id="gameMessage">
+      Game demo siap dimainkan.
+    </p>
+
+    <button onclick="closeGame()">
+      TUTUP GAME
+    </button>
+  </div>
+</div>
 <script src="script.js"></script>
 
 <div id="providerModal" style="display:none;"></div>
