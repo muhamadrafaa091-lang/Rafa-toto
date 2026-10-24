@@ -491,3 +491,125 @@ body {
     font-size: 52px;
   }
 }
+
+.mahjong-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: radial-gradient(circle, #6b1809, #10030a 85%);
+  padding: 10px;
+  overflow-y: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.mahjong-screen {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  padding: 15px;
+  color: #ffe9a6;
+  text-align: center;
+  border: 3px solid #d99b27;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #420b0b, #160609);
+  box-shadow: 0 0 35px #ffb52b88;
+}
+
+.mahjong-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.mahjong-header h2 {
+  color: #ffd56b;
+  font-size: 18px;
+}
+
+.mahjong-header button,
+.mahjong-controls button {
+  border: 2px solid #ffc44d;
+  border-radius: 12px;
+  padding: 12px;
+  color: #fff2bd;
+  background: linear-gradient(#a83a13, #520c08);
+  font-weight: bold;
+}
+
+.mahjong-banner {
+  margin: 18px 0;
+  padding: 20px 5px;
+  border: 2px solid #f6bf4c;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #650d0d, #d18a19, #650d0d);
+}
+
+.mahjong-banner h2 {
+  color: #fff2a5;
+  text-shadow: 0 2px 8px #5b1600;
+}
+
+.mahjong-multiplier {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  background: #075b47;
+  border: 2px solid #d5a43d;
+  border-radius: 12px;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.mahjong-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin: 15px 0;
+  padding: 10px;
+  border: 3px solid #e5ac42;
+  border-radius: 15px;
+  background: #350d0a;
+}
+
+.mahjong-board div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #fff8d8, #d7ad68);
+  color: #8b170c;
+  font-size: clamp(24px, 7vw, 43px);
+  box-shadow: 0 3px 5px #0008;
+}
+
+.mahjong-result {
+  padding: 15px;
+  border: 2px solid #e8b33e;
+  border-radius: 14px;
+  background: #190707;
+}
+
+.mahjong-result strong {
+  display: block;
+  margin: 8px;
+  color: #ffdc65;
+  font-size: 30px;
+}
+
+.mahjong-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.mahjong-controls button:last-child {
+  flex: 1;
+  background: linear-gradient(#f8c84f, #a94b08);
+  color: #351000;
+}
