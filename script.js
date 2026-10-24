@@ -140,6 +140,12 @@ function closeCatalog() {
 }
 
 function showDemoInfo(name) {
-  alert(name + " — Katalog hiburan demo RAFA TOTO.");
+  const gameModal = document.getElementById("gameModal");
+  const gameTitle = document.getElementById("gameTitle");
+  const gameMessage = document.getElementById("gameMessage");
+
+  gameTitle.textContent = name;
+  gameMessage.textContent = "Game demo " + name + " siap dimainkan.";
+  gameModal.style.display = "flex";
 }
 
