@@ -422,3 +422,72 @@ body {
   transform: perspective(700px) translateY(-5px) rotateX(3deg);
   box-shadow: 0 12px 25px rgba(218,165,32,.3);
 }
+/* RAFA TOTO - KARTU GAME DEMO */
+
+.game-catalog {
+  padding: 30px 16px;
+  background: linear-gradient(145deg, #211700, #080808);
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1200px;
+  margin: 25px auto;
+}
+
+.game-tile {
+  padding: 14px;
+  text-align: center;
+  background: linear-gradient(145deg, #49340d, #111);
+  border: 1px solid #d4af37;
+  border-radius: 14px;
+  box-shadow: 0 7px 0 #3a2707,
+              0 12px 22px rgba(0,0,0,.6);
+  transition: .3s ease;
+}
+
+.game-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(218,165,32,.3);
+}
+
+.game-art {
+  min-height: 130px;
+  display: grid;
+  place-items: center;
+  font-size: 65px;
+  background: radial-gradient(circle, #72500c, #090909 75%);
+  border-radius: 10px;
+  border: 1px solid #8b6914;
+}
+
+.game-tile h3 {
+  color: #f5d675;
+  font-size: 15px;
+  margin: 14px 0;
+}
+
+.game-tile button {
+  width: 100%;
+  padding: 11px 8px;
+  color: #1b1200;
+  font-weight: bold;
+  background: linear-gradient(180deg, #ffe58a, #c18b16);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .game-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .game-art {
+    min-height: 105px;
+    font-size: 52px;
+  }
+}
