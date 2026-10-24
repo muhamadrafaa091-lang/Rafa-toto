@@ -1,1 +1,96 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <title>RAFA TOTO - Game Arcade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">RAFA <span>TOTO</span></div>
+  <div class="menu">☰</div>
+</header>
+
+<section class="hero">
+  <p class="tagline">WELCOME TO</p>
+  <h1>RAFA TOTO</h1>
+  <p>Dunia permainan virtual dalam satu tempat.</p>
+  <a href="#games" class="main-btn">JELAJAHI GAME</a>
+</section>
+
+<section class="balance">
+  <div>
+    <small>POIN VIRTUAL</small>
+    <h2 id="points">1000</h2>
+  </div>
+  <div class="coin">🪙</div>
+</section>
+
+<main>
+  <section class="providers">
+    <h2>KATEGORI GAME</h2>
+    <div class="provider-list">
+      <button onclick="showGames('all')">Semua</button>
+      <button onclick="showGames('slot')">Slot Virtual</button>
+      <button onclick="showGames('arcade')">Arcade</button>
+      <button onclick="showGames('puzzle')">Puzzle</button>
+    </div>
+  </section>
+
+  <section id="games">
+    <h2>🔥 PILIH PERMAINAN</h2>
+    <div class="game-grid">
+      <article class="game-card" data-category="slot">
+        <div class="game-icon">🎰</div>
+        <h3>Lucky Spin</h3>
+        <p>Slot virtual gratis</p>
+        <button onclick="playGame('Lucky Spin')">MAIN</button>
+      </article>
+
+      <article class="game-card" data-category="slot">
+        <div class="game-icon">🍒</div>
+        <h3>Fruit Party</h3>
+        <p>Game buah virtual</p>
+        <button onclick="playGame('Fruit Party')">MAIN</button>
+      </article>
+
+      <article class="game-card" data-category="arcade">
+        <div class="game-icon">🎯</div>
+        <h3>Lucky Target</h3>
+        <p>Game target</p>
+        <button onclick="playGame('Lucky Target')">MAIN</button>
+      </article>
+
+      <article class="game-card" data-category="puzzle">
+        <div class="game-icon">🧩</div>
+        <h3>Brain Puzzle</h3>
+        <p>Asah kemampuan</p>
+        <button onclick="playGame('Brain Puzzle')">MAIN</button>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <h3>RAFA TOTO</h3>
+  <p>Platform hiburan game virtual gratis.</p>
+  <small>© 2026 RAFA TOTO</small>
+</footer>
+
+<div id="gameModal" class="modal">
+  <div class="modal-content">
+    <button class="close" onclick="closeGame()">✕</button>
+    <h2 id="gameTitle">GAME</h2>
+    <p id="gameMessage">Selamat bermain!</p>
+    <button onclick="closeGame()">KEMBALI KE LOBBY</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+  
