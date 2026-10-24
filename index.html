@@ -2,95 +2,131 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101010">
-  <title>RAFA TOTO - Game Arcade</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>RAFA TOTO - Virtual Game Entertainment</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">RAFA <span>TOTO</span></div>
-  <div class="menu">☰</div>
+<header class="topbar">
+  <div class="brand">👑 RAFA <span>TOTO</span></div>
+  <nav>
+    <a href="#">⌂ Beranda</a>
+    <a href="#providers">Game</a>
+    <a href="#promo">Promo</a>
+    <a href="#footer">Info</a>
+  </nav>
+  <button class="menu-btn">☰</button>
 </header>
 
 <section class="hero">
-  <p class="tagline">WELCOME TO</p>
-  <h1>RAFA TOTO</h1>
-  <p>Dunia permainan virtual dalam satu tempat.</p>
-  <a href="#games" class="main-btn">JELAJAHI GAME</a>
-</section>
-
-<section class="balance">
-  <div>
-    <small>POIN VIRTUAL</small>
-    <h2 id="points">1000</h2>
+  <div class="hero-content">
+    <p>SELAMAT DATANG DI</p>
+    <h1>RAFA TOTO</h1>
+    <h3>VIRTUAL GAME ENTERTAINMENT</h3>
+    <div class="hero-label">MANY PROVIDERS • MANY GAMES</div>
   </div>
-  <div class="coin">🪙</div>
+  <div class="hero-art">🐉</div>
 </section>
 
 <main>
-  <section class="providers">
-    <h2>KATEGORI GAME</h2>
-    <div class="provider-list">
-      <button onclick="showGames('all')">Semua</button>
-      <button onclick="showGames('slot')">Slot Virtual</button>
-      <button onclick="showGames('arcade')">Arcade</button>
-      <button onclick="showGames('puzzle')">Puzzle</button>
-    </div>
-  </section>
 
-  <section id="games">
-    <h2>🔥 PILIH PERMAINAN</h2>
-    <div class="game-grid">
-      <article class="game-card" data-category="slot">
-        <div class="game-icon">🎰</div>
-        <h3>Lucky Spin</h3>
-        <p>Slot virtual gratis</p>
-        <button onclick="playGame('Lucky Spin')">MAIN</button>
-      </article>
+<div class="search-area">
+  <input id="searchinput" type="search"
+  placeholder="Cari provider atau nama game...">
+  <button onclick="searchProvider()">⌕</button>
+</div>
 
-      <article class="game-card" data-category="slot">
-        <div class="game-icon">🍒</div>
-        <h3>Fruit Party</h3>
-        <p>Game buah virtual</p>
-        <button onclick="playGame('Fruit Party')">MAIN</button>
-      </article>
+<section id="providers">
+  <div class="section-title">
+    <h2>🔥 GAME PROVIDERS</h2>
+    <p>Pilih kategori koleksi permainan favoritmu</p>
+  </div>
 
-      <article class="game-card" data-category="arcade">
-        <div class="game-icon">🎯</div>
-        <h3>Lucky Target</h3>
-        <p>Game target</p>
-        <button onclick="playGame('Lucky Target')">MAIN</button>
-      </article>
+  <div class="provider-grid" id="providerGrid">
 
-      <article class="game-card" data-category="puzzle">
-        <div class="game-icon">🧩</div>
-        <h3>Brain Puzzle</h3>
-        <p>Asah kemampuan</p>
-        <button onclick="playGame('Brain Puzzle')">MAIN</button>
-      </article>
-    </div>
-  </section>
+    <article class="provider-card pg" data-name="pg soft">
+      <div class="provider-art">🐉</div>
+      <div class="provider-info">
+        <span class="provider-tag">PROVIDER 01</span>
+        <h3>PG SOFT</h3>
+        <p>GAME COLLECTION</p>
+        <button onclick="openProvider('pgsoft')">LIHAT KOLEKSI →</button>
+      </div>
+    </article>
+
+    <article class="provider-card pragmatic" data-name="pragmatic play">
+      <div class="provider-art">⚡</div>
+      <div class="provider-info">
+        <span class="provider-tag">PROVIDER 02</span>
+        <h3>PRAGMATIC PLAY</h3>
+        <p>GAME COLLECTION</p>
+        <button onclick="openProvider('pragmatic')">LIHAT KOLEKSI →</button>
+      </div>
+    </article>
+
+    <article class="provider-card idn" data-name="idn slot">
+      <div class="provider-art">🏛️</div>
+      <div class="provider-info">
+        <span class="provider-tag">PROVIDER 03</span>
+        <h3>IDN SLOT</h3>
+        <p>GAME COLLECTION</p>
+        <button onclick="openProvider('idnslot')">LIHAT KOLEKSI →</button>
+      </div>
+    </article>
+
+    <article class="provider-card lottery" data-name="idn e-lottery">
+      <div class="provider-art">🔮</div>
+      <div class="provider-info">
+        <span class="provider-tag">PROVIDER 04</span>
+        <h3>IDN E-LOTTERY</h3>
+        <p>GAME COLLECTION</p>
+        <button onclick="openProvider('lottery')">LIHAT KOLEKSI →</button>
+      </div>
+    </article>
+
+    <article class="provider-card mania" data-name="slotmania">
+      <div class="provider-art">🐯</div>
+      <div class="provider-info">
+        <span class="provider-tag">PROVIDER 05</span>
+        <h3>SLOTMANIA</h3>
+        <p>GAME COLLECTION</p>
+        <button onclick="openProvider('slotmania')">LIHAT KOLEKSI →</button>
+      </div>
+    </article>
+
+    <article class="provider-card habanero" data-name="habanero">
+      <div class="provider-art">🌋</div>
+      <div class="provider-info">
+        <span class="provider-tag">PROVIDER 06</span>
+        <h3>HABANERO</h3>
+        <p>GAME COLLECTION</p>
+        <button onclick="openProvider('habanero')">LIHAT KOLEKSI →</button>
+      </div>
+    </article>
+
+  </div>
+  <p id="pesanPencarian"></p>
+</section>
+
+<section class="features" id="promo">
+  <div>🎮<span>HIBURAN VIRTUAL</span></div>
+  <div>🛡️<span>AMAN & NYAMAN</span></div>
+  <div>📱<span>RAMAH ANDROID</span></div>
+  <div>✨<span>DESAIN PREMIUM</span></div>
+</section>
+
 </main>
 
-<footer>
-  <h3>RAFA TOTO</h3>
-  <p>Platform hiburan game virtual gratis.</p>
+<footer id="footer">
+  <div class="footer-logo">👑 RAFA TOTO</div>
+  <p>Virtual Game Entertainment</p>
   <small>© 2026 RAFA TOTO</small>
 </footer>
 
-<div id="gameModal" class="modal">
-  <div class="modal-content">
-    <button class="close" onclick="closeGame()">✕</button>
-    <h2 id="gameTitle">GAME</h2>
-    <p id="gameMessage">Selamat bermain!</p>
-    <button onclick="closeGame()">KEMBALI KE LOBBY</button>
-  </div>
-</div>
-
 <script src="script.js"></script>
 </body>
-</html>
+  </html>
   
