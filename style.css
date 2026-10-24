@@ -390,3 +390,35 @@ footer small {
     gap: 10px;
   }
 }
+/* RAFA TOTO - PREMIUM 3D BACKGROUND */
+
+body {
+  background:
+    radial-gradient(ellipse at top, #45300b 0%, #17120a 35%, #050505 80%);
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.provider-section {
+  background:
+    linear-gradient(145deg, #211700, #080808 65%, #302006);
+  border-top: 1px solid #b8860b;
+  border-bottom: 1px solid #b8860b;
+}
+
+.provider-card {
+  background:
+    linear-gradient(145deg, #49340d, #19130a 45%, #080808);
+  border: 1px solid #d4af37;
+  box-shadow:
+    0 8px 0 #3a2707,
+    0 12px 25px rgba(0,0,0,.8),
+    inset 0 1px 8px rgba(255,215,0,.2);
+  transform: perspective(700px) translateZ(0);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.provider-card:hover {
+  transform: perspective(700px) translateY(-5px) rotateX(3deg);
+  box-shadow: 0 12px 25px rgba(218,165,32,.3);
+}
