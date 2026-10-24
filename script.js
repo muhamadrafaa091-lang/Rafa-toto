@@ -38,44 +38,6 @@ if (pointsDisplay) {
   pointsDisplay.textContent = points;
   }
 // RAFA TOTO - SISTEM KATALOG DEMO
-
-
-
-function openProvider(provider) {
-  const data = providerGames[provider];
-
-  if (!data) {
-    alert("Katalog demo provider ini sedang disiapkan.");
-    return;
-  }
-
-  document.getElementById("providers").style.display = "none";
-  document.getElementById("gameCatalog").style.display = "block";
-
-  document.getElementById("catalogTitle").textContent = data.title;
-
-  const grid = document.getElementById("gameGrid");
-
-  grid.innerHTML = data.games.map(game => `
-    <div class="game-tile">
-      <div class="game-art">🎮</div>
-      <h3>${game}</h3>
-      <button onclick="showDemoInfo('${game}')">
-        LIHAT DEMO
-      </button>
-    </div>
-  `).join("");
-}
-
-function closeCatalog() {
-  document.getElementById("gameCatalog").style.display = "none";
-  document.getElementById("providers").style.display = "block";
-}
-
-function showDemoInfo(name) {
-  alert(name + " — Katalog hiburan demo RAFA TOTO.");
-}
-
 const providerGames = {
   pgsoft: {
     title: "PG SOFT",
@@ -144,6 +106,43 @@ const providerGames = {
     ]
   }
 };
+
+
+function openProvider(provider) {
+  const data = providerGames[provider];
+
+  if (!data) {
+    alert("Katalog demo provider ini sedang disiapkan.");
+    return;
+  }
+
+  document.getElementById("providers").style.display = "none";
+  document.getElementById("gameCatalog").style.display = "block";
+
+  document.getElementById("catalogTitle").textContent = data.title;
+
+  const grid = document.getElementById("gameGrid");
+
+  grid.innerHTML = data.games.map(game => `
+    <div class="game-tile">
+      <div class="game-art">🎮</div>
+      <h3>${game}</h3>
+      <button onclick="showDemoInfo('${game}')">
+        LIHAT DEMO
+      </button>
+    </div>
+  `).join("");
+}
+
+function closeCatalog() {
+  document.getElementById("gameCatalog").style.display = "none";
+  document.getElementById("providers").style.display = "block";
+}
+
+function showDemoInfo(name) {
+  alert(name + " — Katalog hiburan demo RAFA TOTO.");
+}
+
 
 
 function openProvider(providerId) {
