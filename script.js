@@ -39,21 +39,7 @@ if (pointsDisplay) {
   }
 // RAFA TOTO - SISTEM KATALOG DEMO
 
-const providerGames = {
-  pgsoft: {
-    title: "PG SOFT",
-    games: [
-      "Mahjong Ways",
-      "Mahjong Ways 2",
-      "Fortune Tiger",
-      "Fortune Ox",
-      "Fortune Rabbit",
-      "Lucky Neko",
-      "Treasures of Aztec",
-      "Wild Bandito"
-    ]
-  }
-};
+
 
 function openProvider(provider) {
   const data = providerGames[provider];
@@ -89,3 +75,73 @@ function closeCatalog() {
 function showDemoInfo(name) {
   alert(name + " — Katalog hiburan demo RAFA TOTO.");
 }
+
+const providerGames = {
+  pgsoft: {
+    title: "PG SOFT",
+    games: [
+      "Mahjong Ways",
+      "Mahjong Ways 2",
+      "Fortune Tiger",
+      "Fortune Ox",
+      "Fortune Rabbit",
+      "Lucky Neko",
+      "Treasures of Aztec",
+      "Wild Bandito"
+    ]
+  },
+
+  pragmatic: {
+    title: "PRAGMATIC PLAY",
+    games: [
+      "Sweet Bonanza",
+      "Gates of Olympus",
+      "Starlight Princess",
+      "The Dog House",
+      "Sugar Rush",
+      "Big Bass Bonanza"
+    ]
+  },
+
+  idnslot: {
+    title: "IDNSLOT",
+    games: [
+      "Dragon Legend",
+      "Golden Dragon",
+      "Lucky Panda",
+      "Mystic Fortune"
+    ]
+  },
+
+  idnlottery: {
+    title: "IDN E-LOTTERY",
+    games: [
+      "Lucky Number",
+      "Daily Number",
+      "Number Puzzle",
+      "Lucky Draw"
+    ]
+  },
+
+  slotmania: {
+    title: "SLOTMANIA",
+    games: [
+      "Golden Adventure",
+      "Magic Treasure",
+      "Jungle Quest",
+      "Diamond World"
+    ]
+  },
+
+  habanero: {
+    title: "HABANERO",
+    games: [
+      "Hot Hot Fruit",
+      "Koi Gate",
+      "Fa Cai Shen",
+      "Wild Trucks",
+      "Egyptian Dreams"
+    ]
+  }
+};
+    
